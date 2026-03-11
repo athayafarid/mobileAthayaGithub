@@ -9,7 +9,7 @@ fun main(){
     var angka = 15
     println("Hasil dari 15 + 10 = ${angka + 10}")
 
-    val nilaiInt = 10000
+    val nilaiInt = 1000
     val nilaiDouble = 100.003
     val nilaiFloat = 1000.0f
 
