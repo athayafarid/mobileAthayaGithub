@@ -1,5 +1,6 @@
 package com.example.athaya.pertemuan3
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -31,6 +32,8 @@ class ThirdActivity : AppCompatActivity() {
         binding.btnKirim.setOnClickListener {
             val no = binding.inputNoTujuan.text
             Toast.makeText(this, "pesan berhasi di kirim ke $no", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            startActivity(intent)
         }
 
     }
