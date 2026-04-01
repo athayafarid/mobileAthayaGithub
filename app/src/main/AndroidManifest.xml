@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Athaya">
         <activity
+            android:name=".pertemuan3.ThirdResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".pertemuan3.ThirdActivity"
             android:exported="true">
             <intent-filter>
@@ -19,14 +22,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".pertemuan2.SecondActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="false" />
