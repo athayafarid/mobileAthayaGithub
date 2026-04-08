@@ -49,7 +49,7 @@
     <ImageView
         android:layout_width="363dp"
         android:layout_height="187dp"
-        android:src="@drawable/gamabr"
+        android:src="@drawable/addudu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
