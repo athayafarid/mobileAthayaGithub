@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
                     editor.apply()
                     val intent = Intent(this, AuthActivity::class.java)
                     startActivity(intent)
-                    Log.e("Info Dialog","Anda memilih Ya!")
                     finish()
                 }
                 .setNegativeButton("Batal") { dialog, _ ->

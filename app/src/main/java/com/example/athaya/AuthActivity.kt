@@ -33,13 +33,7 @@ class AuthActivity : AppCompatActivity() {
         //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
-        //Kondisi jika isLogin bernilai true
-        val isLogin = sharedPref.getBoolean("isLogin", false)
-        if (isLogin) {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()//untuk menghapus AuthActivity dari stuck
-        }
+
         // 3. Set Click Listener
         btnLogin.setOnClickListener {
             val username = etUsername.text.toString().trim()
