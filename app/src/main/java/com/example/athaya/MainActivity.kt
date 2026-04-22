@@ -2,12 +2,14 @@ package com.example.athaya
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.athaya.databinding.ActivityMainBinding
 import com.example.athaya.pertemuan4.FourthActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +26,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+
+
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
 
@@ -32,6 +37,26 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("age", 25)
 
             startActivity(intent)
+        }
+        binding.Logout.setOnClickListener{
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda yakin ingin melanjutkan?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    dialog.dismiss()
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    Log.e("Info Dialog","Anda memilih Ya!")
+                    finish()
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                    Log.e("Info Dialog","Anda memilih Tidak!")
+                }
+                .show()
         }
 
     }
