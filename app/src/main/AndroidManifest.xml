@@ -15,9 +15,21 @@
         android:theme="@style/Theme.Athaya">
 
         <activity
-            android:name=".pertemuan_5.WebViewActivity"
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".pertemuan_5.WebViewActivity"
+            android:exported="false" />
 
         <activity
             android:name=".pertemuan4.FourthActivity"
@@ -39,12 +51,7 @@
             android:exported="false"/>
         <activity
                 android:name=".pertemuan_5.FifthActivity"
-                android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+                android:exported="false" />
 
     </application>
 
