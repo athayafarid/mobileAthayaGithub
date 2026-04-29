@@ -1,4 +1,4 @@
-package com.example.athaya.pertemuan3
+package com.example.athaya.Home.pertemuan3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

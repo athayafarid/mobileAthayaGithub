@@ -8,8 +8,11 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import com.example.athaya.databinding.ActivityMainBinding
-import com.example.athaya.pertemuan4.FourthActivity
-import com.example.athaya.pertemuan_5.WebViewActivity
+import com.example.athaya.Home.pertemuan2.SecondActivity
+import com.example.athaya.Home.pertemuan3.ThirdActivity
+import com.example.athaya.Home.pertemuan4.FourthActivity
+import com.example.athaya.Home.pertemuan7.SevenActivity
+import com.example.athaya.pertemuan_5.FifthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -25,19 +28,25 @@ class MainActivity : AppCompatActivity() {
         // Set Toolbar
         setSupportActionBar(binding.toolbar)
         
-        // Setup Navigation Drawer Toggle (Garis Tiga)
+        // Setup Navigation Drawer Toggle
         toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.open, R.string.close)
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.btnWebView.setOnClickListener {
-            val intent = Intent(this, WebViewActivity::class.java)
-            startActivity(intent)
+        // Pertemuan 2 -> SecondActivity
+        binding.btnPertemuan2.setOnClickListener {
+            startActivity(Intent(this, SecondActivity::class.java))
         }
 
-        binding.btnToFourth.setOnClickListener {
+        // Pertemuan 3 -> ThirdActivity
+        binding.btnPertemuan3.setOnClickListener {
+            startActivity(Intent(this, ThirdActivity::class.java))
+        }
+
+        // Pertemuan 4 -> FourthActivity
+        binding.btnPertemuan4.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
@@ -45,6 +54,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Pertemuan 5 -> FifthActivity
+        binding.btnPertemuan5.setOnClickListener {
+            startActivity(Intent(this, FifthActivity::class.java))
+        }
+
+        // Pertemuan 7 -> SevenActivity (New Package)
+        binding.btnPertemuan7.setOnClickListener {
+            startActivity(Intent(this, SevenActivity::class.java))
+        }
+
+        // Logout Button
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Konfirmasi Logout")

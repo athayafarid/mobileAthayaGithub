@@ -233,37 +233,82 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="24dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="Belajar Mobile itu Asyiik!"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <Button
-                        android:id="@+id/btnWebView"
-                        android:layout_width="0dp"
-                        android:layout_height="56dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="8dp"
-                        android:backgroundTint="#2962FF"
-                        android:text="Web View / Desktop View"
-                        android:textAllCaps="false" />
+                        android:id="@+id/btnPertemuan2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:backgroundTint="#6A5ACD"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:shape="ring"
+                        android:text="Pertemuan 2"
+                        android:textAllCaps="false"
+                        app:cornerRadius="24dp" />
 
                     <Button
-                        android:id="@+id/btnToFourth"
-                        android:layout_width="0dp"
-                        android:layout_height="56dp"
-                        android:layout_weight="1"
-                        android:layout_marginStart="8dp"
+                        android:id="@+id/btnPertemuan3"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:backgroundTint="#6A5ACD"
+                        android:text="Pertemuan 3"
+                        android:textAllCaps="false"
+                        app:cornerRadius="24dp" />
+
+                    <Button
+                        android:id="@+id/btnPertemuan4"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:backgroundTint="#6A5ACD"
                         android:text="Pertemuan 4"
-                        android:textAllCaps="false" />
-                </LinearLayout>
+                        android:textAllCaps="false"
+                        app:cornerRadius="24dp" />
 
-                <Button
-                    android:id="@+id/btnLogout"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="#D32F2F"
-                    android:text="Logout"
-                    android:textAllCaps="false" />
+                    <Button
+                        android:id="@+id/btnPertemuan5"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:backgroundTint="#6A5ACD"
+                        android:text="Pertemuan 5"
+                        android:textAllCaps="false"
+                        app:cornerRadius="24dp" />
+
+                    <Button
+                        android:id="@+id/btnPertemuan7"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:backgroundTint="#6A5ACD"
+                        android:text="Pertemuan 7"
+                        android:textAllCaps="false"
+                        app:cornerRadius="24dp" />
+
+                    <Button
+                        android:id="@+id/btnLogout"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#D32F2F"
+                        android:text="Logout"
+                        android:textAllCaps="false"
+                        app:cornerRadius="24dp" />
+
+                </LinearLayout>
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

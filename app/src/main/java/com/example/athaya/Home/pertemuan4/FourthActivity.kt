@@ -1,5 +1,6 @@
-package com.example.athaya.pertemuan4
+package com.example.athaya.Home.pertemuan4
 
+import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -40,7 +41,7 @@ class FourthActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
+            R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
                 true
             }
