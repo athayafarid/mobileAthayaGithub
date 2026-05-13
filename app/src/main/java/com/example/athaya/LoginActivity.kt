@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
                     apply()
                 }
 
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, BaseActivity::class.java))
                 finish()
             } else {
                 Toast.makeText(this, "Email atau Password Salah", Toast.LENGTH_SHORT).show()

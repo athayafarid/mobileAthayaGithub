@@ -14,10 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Athaya">
         <activity
-            android:name=".SplashActivity"
+            android:name=".Home.pertemuan9.NinthActivity"
             android:exported="false" />
         <activity
             android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

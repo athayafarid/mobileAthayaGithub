@@ -11,6 +11,7 @@ import com.example.athaya.Home.pertemuan2.SecondActivity
 import com.example.athaya.Home.pertemuan3.ThirdActivity
 import com.example.athaya.Home.pertemuan4.FourthActivity
 import com.example.athaya.Home.pertemuan7.SevenActivity
+import com.example.athaya.Home.pertemuan9.NinthActivity
 import com.example.athaya.LoginActivity
 import com.example.athaya.R
 import com.example.athaya.databinding.FragmentHomeBinding
@@ -65,6 +66,11 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), SevenActivity::class.java))
         }
 
+        // Pertemuan 9 -> NinthActivity
+        binding.btnPertemuan9.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+
         // Logout Button
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
@@ -73,10 +79,10 @@ class HomeFragment : Fragment() {
                 .setPositiveButton("Ya") { dialog, _ ->
                     dialog.dismiss()
 
-                    with(sharedPref.edit()) {
-                        putBoolean("isLogin", false)
-                        apply()
-                    }
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
                     startActivity(Intent(requireContext(), LoginActivity::class.java))
                     requireActivity().finish()
                 }

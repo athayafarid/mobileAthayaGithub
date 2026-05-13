@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.Athaya" parent="Base.Theme.Athaya" />
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
