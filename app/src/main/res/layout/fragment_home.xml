@@ -273,9 +273,19 @@
                         android:id="@+id/btnPertemuan9"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="12dp"
                         android:backgroundTint="#6A5ACD"
                         android:text="Pertemuan 9"
+                        android:textAllCaps="false"
+                        app:cornerRadius="24dp" />
+
+                    <Button
+                        android:id="@+id/btnPertemuan10"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:backgroundTint="#6A5ACD"
+                        android:text="Pertemuan 10"
                         android:textAllCaps="false"
                         app:cornerRadius="24dp" />
 

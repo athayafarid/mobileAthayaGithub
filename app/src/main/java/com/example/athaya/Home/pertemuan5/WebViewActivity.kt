@@ -1,8 +1,6 @@
 package com.example.athaya.pertemuan_5
 
-import android.R
 import android.os.Bundle
-import android.view.MenuItem
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 // Pastikan binding merujuk ke package athaya
@@ -27,6 +25,9 @@ class WebViewActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         binding.webView.webViewClient = WebViewClient()
         binding.webView.settings.javaScriptEnabled = true
@@ -41,17 +42,6 @@ class WebViewActivity : AppCompatActivity() {
                 binding.appBar.setExpanded(true, true) // tampilkan
                 isAppBarVisible = true
             }
-        }
-    }
-
-    // Mengaktifkan tombol back pada toolbar
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
         }
     }
 

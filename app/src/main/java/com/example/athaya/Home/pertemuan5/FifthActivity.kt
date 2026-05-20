@@ -28,8 +28,9 @@ class FifthActivity : AppCompatActivity() {
             subtitle = "Ini adalah subtitle"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            // Pastikan kamu punya file ic_arrow_back di folder res/drawable
-            setHomeAsUpIndicator(R.drawable.ic_add)
+        }
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
 
         // Navigasi ke WebViewActivity
@@ -47,10 +48,6 @@ class FifthActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
-                true
-            }
             R.id.action_search -> {
                 Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show()
                 true

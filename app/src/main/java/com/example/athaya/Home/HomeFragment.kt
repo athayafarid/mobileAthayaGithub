@@ -12,6 +12,7 @@ import com.example.athaya.Home.pertemuan3.ThirdActivity
 import com.example.athaya.Home.pertemuan4.FourthActivity
 import com.example.athaya.Home.pertemuan7.SevenActivity
 import com.example.athaya.Home.pertemuan9.NinthActivity
+import com.example.athaya.Home.pertemuan_10.TenthActivity
 import com.example.athaya.LoginActivity
 import com.example.athaya.R
 import com.example.athaya.databinding.FragmentHomeBinding
@@ -69,6 +70,11 @@ class HomeFragment : Fragment() {
         // Pertemuan 9 -> NinthActivity
         binding.btnPertemuan9.setOnClickListener {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+
+        // Pertemuan 10 -> TenthActivity
+        binding.btnPertemuan10.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
 
         // Logout Button

@@ -22,6 +22,9 @@ class SevenActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
         binding.btnFragment1.setOnClickListener {
             replaceFragment(SatuFragment())
         }
@@ -40,14 +43,5 @@ class SevenActivity : AppCompatActivity() {
             .replace(binding.fragmentContainer.id, fragment)
             .addToBackStack(null)
             .commit()
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Logika ketika tombol kembali di klik
-        if (item.itemId == android.R.id.home) {
-            finish()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

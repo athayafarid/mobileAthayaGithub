@@ -13,6 +13,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="#6A5ACD"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:navigationIconTint="@color/white"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:title="Halaman Seventh" />
 
